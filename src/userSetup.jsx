@@ -26,6 +26,8 @@ export default function UserProfile() {
             <Input type="text" value={user.name} readOnly className="cursor-not-allowed" />
             <label className="text-sm font-medium">Email</label>
             <Input type="email" value={user.email} readOnly className="cursor-not-allowed" />
+            <label className="text-sm font-medium">Job</label>
+            <Input type="text" value={user.job} readOnly className="cursor-not-allowed" />
           </div>
           <Button>Edit Profile</Button>
         </CardContent>
