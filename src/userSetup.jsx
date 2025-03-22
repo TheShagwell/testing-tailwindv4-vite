@@ -9,6 +9,7 @@ export default function UserProfile() {
     name: "John Doe",
     email: "johndoe@example.com",
     avatar: "https://via.placeholder.com/100",
+    job: "Real Estate Agent",
   });
 
   return (
