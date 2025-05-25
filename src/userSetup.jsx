@@ -7,7 +7,7 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 export default function UserProfile() {
   const [user, setUser] = useState({
     name: "John Amaka",
-    email: "john.doe@example.com",
+    email: "john.amaka@itandtsolutions.com",
     avatar: "https://via.placeholder.com/100",
     job: "Customer Representative",
   });
