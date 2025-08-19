@@ -25,3 +25,6 @@ export const apiPost = async (url, data) => {
   });
   return response.json();
 };
+
+export const apiDelete = async (url, data) => apiPost(url, data);
+export const apiUpdate = async (url, data) => apiPost(url, data);
