@@ -1,13 +1,19 @@
 import axios from "axios";
-import { securedHeaderKeyPost, getAllHeader } from "../constants";
+import { BASE_URL, securedHeaderKey, securedHeaderKeyPost } from "../constants";
 
 const api = axios.create({
   headers: { "Content-Type": "application/json" }
 });
 
-export const apiGet = async (url, headers = getAllHeader()) => {
-  const response = await fetch(url, { headers });
-  return response.json();
+// Encode payload consistently
+const encodeData = (data) => ({
+  data: securedHeaderKeyPost + btoa(JSON.stringify(data)),
+});
+
+// 🔹 GET
+export const apiGet = async (url, headers = { secureddata: securedHeaderKey }) => {
+  const res = await api.get(url, { headers });
+  return res.data;
 };
 
 export const apiPost = async (url, data) => {
