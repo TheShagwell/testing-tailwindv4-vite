@@ -32,6 +32,15 @@ export const apiPut = async (url, data) => {
   return res.data;
 };
 
+// 🔹 DELETE
+export const apiDelete = async (url, data) => {
+  const res = await api.delete(url, {
+    data: encodeData(data),
+    headers: { secureddata: securedHeaderKeyPost + btoa(JSON.stringify(data)) },
+  });
+  return res.data;
+};
+
 // export const apiPost = async (url, data) => {
 //   const encodedData = {
 //     data: securedHeaderKeyPost + btoa(JSON.stringify(data)),
@@ -48,5 +57,5 @@ export const apiPut = async (url, data) => {
 //   return response.json();
 // };
 
-export const apiDelete = async (url, data) => apiPost(url, data);
-export const apiUpdate = async (url, data) => apiPost(url, data);
+// export const apiDelete = async (url, data) => apiPost(url, data);
+// export const apiUpdate = async (url, data) => apiPost(url, data);
