@@ -12,30 +12,30 @@ const encodeData = (data) => ({
 }); 
 
 // 🔹 GET
-export const apiGet = async (url, headers = { secureddata: securedHeaderKey }) => {
-  const res = await api.get(url, { headers });
+export const apiGet = async (baseURL, headers = { secureddata: securedHeaderKey }) => {
+  const res = await api.get(baseURL, { headers });
   return res.data;
 };
 
 // 🔹 POST
-export const apiPost = async (url, data) => {
-  const res = await api.post(url, encodeData(data), {
+export const apiPost = async (baseURL, data) => {
+  const res = await api.post(baseURL, encodeData(data), {
     headers: { secureddata: securedHeaderKeyPost + btoa(JSON.stringify(data)) },
   });
   return res.data;
 };
 
 // 🔹 PUT
-export const apiPut = async (url, data) => {
-  const res = await api.put(url, encodeData(data), {
+export const apiPut = async (baseURL, data) => {
+  const res = await api.put(baseURL, encodeData(data), {
     headers: { secureddata: securedHeaderKeyPost + btoa(JSON.stringify(data)) },
   });
   return res.data;
 };
 
 // 🔹 DELETE
-export const apiDelete = async (url, data) => {
-  const res = await api.delete(url, {
+export const apiDelete = async (baseURL, data) => {
+  const res = await api.delete(baseURL, {
     data: encodeData(data),
     headers: { secureddata: securedHeaderKeyPost + btoa(JSON.stringify(data)) },
   });
