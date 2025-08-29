@@ -9,10 +9,13 @@ const api = axios.create({
 // Encode payload consistently
 const encodeData = (data) => ({
   data: securedHeaderKeyPost + btoa(JSON.stringify(data)),
-}); 
+});
 
 // 🔹 GET
-export const apiGet = async (baseURL, headers = { secureddata: securedHeaderKey }) => {
+export const apiGet = async (
+  baseURL,
+  headers = { secureddata: securedHeaderKey }
+) => {
   const res = await api.get(baseURL, { headers });
   return res.data;
 };
