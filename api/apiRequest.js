@@ -2,7 +2,8 @@ import axios from "axios";
 import { BASE_URL, securedHeaderKey, securedHeaderKeyPost } from "../constants";
 
 const api = axios.create({
-  headers: { "Content-Type": "application/json" }
+  baseURL: BASE_URL,
+  headers: { "Content-Type": "application/json" },
 });
 
 // Encode payload consistently
