@@ -11,7 +11,6 @@ const encodeData = (data) => ({
   data: securedHeaderKeyPost + btoa(JSON.stringify(data)),
 });
 
-// 🔹 GET
 export const apiGet = async (
   baseURL,
   headers = { secureddata: securedHeaderKey }
@@ -20,7 +19,6 @@ export const apiGet = async (
   return res.data;
 };
 
-// 🔹 POST
 export const apiPost = async (baseURL, data) => {
   const res = await api.post(baseURL, encodeData(data), {
     headers: { secureddata: securedHeaderKeyPost + btoa(JSON.stringify(data)) },
