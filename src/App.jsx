@@ -11,6 +11,13 @@ export default function App() {
         <Link to="/send-message" className="text-blue-500 underline">
           Send Message
         </Link>
+        
+        <Link to="/receive-message" className="text-blue-500 underline">
+          Receive Message
+        </Link>
+        <Link to="/view-messages" className="text-blue-500 underline">
+          View Messages
+        </Link>
       </header>
     </div>
   );
