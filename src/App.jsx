@@ -10,8 +10,7 @@ export default function App() {
         </span>
         <Link to="/send-message" className="text-blue-500 underline">
           Send Message
-        </Link>
-        
+        </Link>        
         <Link to="/receive-message" className="text-blue-500 underline">
           Receive Message
         </Link>
