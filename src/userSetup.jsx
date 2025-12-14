@@ -29,7 +29,7 @@ export default function UserProfile() {
             <label className="text-sm font-medium">Job</label>
             <Input type="text" value={user.job} readOnly className="cursor-not-allowed" />
           </div>
-          <Button>Edit Profile Detail</Button>
+          <Button className="mt-4">Edit Profile Detail</Button>
         </CardContent>
       </Card>
     </div>
