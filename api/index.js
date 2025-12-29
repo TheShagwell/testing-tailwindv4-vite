@@ -1,10 +1,9 @@
-export default function Package () {
+export default function Package() {
   return (
     <>
-    <div>
-      <h1>Package Component</h1>
-    </div>
-
+      <div>
+        <h1>Package Component</h1>
+      </div>
     </>
   );
 }
